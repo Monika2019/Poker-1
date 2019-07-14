@@ -69,10 +69,38 @@ print('\n ------- Cutting line 2 ------')
 p2_desk=[]
 for i in range(0,19):
     p2_desk.append(shuffledDeck[i])
+    shuffledDeck.remove(shuffledDeck[i])
 print(p2_desk)
 
 f = codecs.open("deck-player2-54.txt", "w", "utf-8")
 for b in p2_desk:
     f.write(b)
+    f.write('\n')
+f.close
+
+
+print('\n ------- Cutting line 3 ------')
+p3_desk=[]
+for i in range(0,19):
+    p3_desk.append(shuffledDeck[i])
+    shuffledDeck.remove(shuffledDeck[i])
+print(p3_desk)
+
+f = codecs.open("deck-player3-54.txt", "w", "utf-8")
+for c in p3_desk:
+    f.write(c)
+    f.write('\n')
+f.close
+
+
+print('\n ------- Cutting line 4 ------')
+p4_desk=[]
+for i in range(0,19):
+    p4_desk.append(shuffledDeck[i])
+print(p4_desk)
+
+f = codecs.open("deck-player4-54.txt", "w", "utf-8")
+for c in p4_desk:
+    f.write(c)
     f.write('\n')
 f.close
